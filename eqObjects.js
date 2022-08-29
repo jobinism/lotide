@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
-    return false
+    return false;
   }
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
@@ -29,29 +29,29 @@ const eqArrays = function(array1, array2) {
 // }
 
 const eqObjects = function(obj1, obj2) {
-  const keys1 = Object.keys(obj1)
-  const keys2 = Object.keys(obj2)
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
   // console.log(`keys1 = ${keys1} keys2 = ${keys2}`)
   if (keys1.length !== keys2.length) {
-    console.log('false 0')
+    console.log('false 0');
     return false;
   }
-    for (let property in obj1) {
-      const prop1Value = obj1[property]
-      const prop2Value = obj2[property]
-      if (Array.isArray(prop1Value) && Array.isArray(prop2Value)) {
-        if (!eqArrays(prop1Value, prop2Value)) {
-          console.log('false 1')
-          return false;
-        }
-      } else if (prop1Value !== prop2Value) {
-        console.log(prop1Value, prop2Value)
-        console.log('false 2')
+  for (let property in obj1) {
+    const prop1Value = obj1[property];
+    const prop2Value = obj2[property];
+    if (Array.isArray(prop1Value) && Array.isArray(prop2Value)) {
+      if (!eqArrays(prop1Value, prop2Value)) {
+        console.log('false 1');
         return false;
       }
+    } else if (prop1Value !== prop2Value) {
+      console.log(prop1Value, prop2Value);
+      console.log('false 2');
+      return ``;
     }
-    return true;
-}
+  }
+  return true;
+};
 
 // eqObjects({fruit: 'kiwi'}, {fruit: 'kiwi'})
 

@@ -20,6 +20,6 @@ const countLetters = function(letters) {
     }
   }
   return sentence;
-}
+};
 
-console.log(countLetters("lighthouse labs is great"))
+console.log(countLetters("lighthouse labs is great"));

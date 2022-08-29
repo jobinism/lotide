@@ -8,21 +8,21 @@ const assertEqual = function(actual, expected) {
 };
 //We want to find out which items are truthy and add them to
 //results
-//loop through itemsToCount 
+//loop through itemsToCount
 //find each item # of occurence
 
 //add that item to our results object w/ its count
 
 const countOnly = function(allItems, itemsToCount) {
-let results = {}
+  let results = {};
   Object.entries(itemsToCount).forEach(([key, value]) => {
-    console.log(key, value)
+    console.log(key, value);
     if (value === true) {
       let counter = 0;
       for (let i = 0; i < allItems.length; i++) {
         if (allItems[i] === key) {
-          counter ++
-          console.log('counter', counter)
+          counter ++;
+          console.log('counter', counter);
         }
       }
       if (counter > 0) {
@@ -30,12 +30,12 @@ let results = {}
       }
       
     }
-  })
+  });
 
   
   
 
-  console.log('results', results)
+  console.log('results', results);
   return results;
 };
 
@@ -60,10 +60,10 @@ assertEqual(result1["Agouhanna"], undefined);
 
 
 // // We have a list of names in our code
-// // 
+// //
 // //We want to read all the names and pick out the
 // // ones that are 'truthy'
-// // 
+// //
 // //We want our code to make a count of all the truthy names and
-// // ignore the falsey ones 
+// // ignore the falsey ones
 
