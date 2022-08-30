@@ -1,3 +1,5 @@
+const assertEqual = require('./assertEqual');
+
 const words = ["ground", "control", "to", "major", "tom"];
 
 
@@ -19,3 +21,5 @@ const myMap = (array, callback) => {
 console.log(myMap(words, (word) => {
   return word.toUpperCase();
 }));
+
+module.exports = myMap;

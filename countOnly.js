@@ -1,11 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅Assertion Passed: ${actual} === ${expected}✅`);
-  } else {
-    console.log(`🛑Asserion Failed: ${actual} !== ${expected}🛑`);
-  }
-
-};
+const assertEqual = require('./assertEqual');
+const assertArraysEqual = require('./assertArraysEqual');
 //We want to find out which items are truthy and add them to
 //results
 //loop through itemsToCount
@@ -67,3 +61,4 @@ assertEqual(result1["Agouhanna"], undefined);
 // //We want our code to make a count of all the truthy names and
 // // ignore the falsey ones
 
+module.exports = countOnly;
