@@ -20,6 +20,5 @@ const middle = function(array) {
 // array[Math.floor(array.length /2)];
 };
 
-console.log(middle(['word1', 'word2', 'word3', 'word4']));
 
 module.exports = middle;
